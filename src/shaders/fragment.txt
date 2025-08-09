@@ -4,8 +4,9 @@ in vec4 color;
 in vec2 textureSt;
 out vec4 fragmentColor;
 
-uniform sampler2D tahmTexture;
+uniform sampler2D text0;
+uniform sampler2D text1;
 
 void main() {
-	fragmentColor = texture(tahmTexture, textureSt);
+	fragmentColor = mix(texture(text0, textureSt), texture(text1, textureSt), 0.2f);
 }
