@@ -127,18 +127,7 @@ int main() {
 	shaderProgram.setUniform("text0", 0);
 	shaderProgram.setUniform("text1", 1);
 	
-	double nextSecond = 1.0;
-	uint32_t framesInSecond = 0;
 	while (!glfwWindowShouldClose(window)) {
-
-		if(glfwGetTime() > nextSecond) {
-			nextSecond++;
-			std::cout << "Frames last second: " << framesInSecond << '\n';
-			framesInSecond = 0;
-		} else {
-			framesInSecond++;
-		}
-
 		glfwPollEvents();
 		mapInputToGlfwState(window);
 
